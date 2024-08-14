@@ -5,7 +5,7 @@ import dotenv from "dotenv";
 
 
 /* CONFIGURATION */
-dotenv.config()
+dotenv.config({path: '.env.local'})
 const notion = new Client({
     auth: process.env.NOTION_TOKEN
 })
@@ -16,26 +16,32 @@ app.use(cors())
 
 
 
-
-/* ROUTES *//*
-app.use("/logIn", logInRoutes)
-app.use("/", homeRoutes)
-*/
-
-
-// PAGE ROUTES
-app.use("/logIn", (req, res) => {
-    res.redirect(`https://api.notion.com/v1/oauth/authorize?client_id=${process.env.OAUTH_CLIENT_ID}&response_type=code&owner=user&redirect_uri=https%3A%2F%2Fspecial-spork-wrrrpxpq9gqpf95r6-8080.app.github.dev%2F`)
+// API ROUTES
+app.get("/api/notionIntegrationUrl", (req, res) => {
+    res.json({
+        integrationUrl: `https://api.notion.com/v1/oauth/authorize?client_id=${process.env.OAUTH_CLIENT_ID}&response_type=code&owner=user&redirect_uri=https%3A%2F%2Fspecial-spork-wrrrpxpq9gqpf95r6-8080.app.github.dev%2F`
+    })
 })
-
-
- // API ROUTES
 app.get("/api/protected", (req, res) => {
     res.json({
         message: "This is protected data"
     })
 })
 
+
+
+
+
+
+
+
+// PAGE ROUTES
+/*
+app.use("/logIn", (req, res) => {
+    res.redirect(`https://api.notion.com/v1/oauth/authorize?client_id=${process.env.OAUTH_CLIENT_ID}&response_type=code&owner=user&redirect_uri=https%3A%2F%2Fspecial-spork-wrrrpxpq9gqpf95r6-8080.app.github.dev%2F`)
+})
+    sedirect frontnd from server. no needed here this has to happen at client server
+*/
 
 
 
