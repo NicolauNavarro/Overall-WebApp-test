@@ -15,7 +15,6 @@ app.use(express.json())
 app.use(cors())
 
 
-
 // API ROUTES
 app.get("/api/notionIntegrationUrl", (req, res) => {
     res.json({
@@ -46,7 +45,7 @@ app.use("/logIn", (req, res) => {
 
 
 
-
+// App port
 app.listen(PORT, () => {
     console.log(`Server started on port ${PORT}`)
 })

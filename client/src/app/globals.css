@@ -1,10 +1,88 @@
 
-
-
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scrollbar-width: 12px;
+  scrollbar-color: rgba(255, 255, 255, 0.2) rgba(0, 0, 0, 0);
+}
+:root {
+  --background: #191919;
+  --white: #d9d9d9;
+  --background-2: #202020;
+  --line: #2e2e2e;
+  --gap: 10px;
+  --unhilight: #373737;
+  --gray: #636363;
+  --btnbg: #2a2a2a;
+  --nav-active: #e1e1e1;
+  --nav-clr: #8c8c8c;
+  --hoverbg-active: #ffffff33;
+  --hoverbg: #ffffff21;
+  --untitled: #ffffffcf;
+  --widgetbg: #202020e6;
+  --widgetLine: #2f2f2f;
+  --widgetobjectbg: #ffffff0e;
+}
+h1 {
+  font-size: 28.38px;
+}
+h2 {
+  font-size: 25.23px;
+}
+h3 {
+  font-size: 22.43px;
+}
+h4 {
+  font-size: 19.93px;
+}
+h5 {
+  font-size: 17.72px;
+}
+h6 {
+  font-size: 15.75px;
+}
+p {
+  font-size: 14px;
+}
+small {
+  font-size: 12.44px;
+}
+body {
+  width: 100vw;
+  min-height: 100vh;   /* TODO: set this as the default height in dashboard so that overflow this height is hidden */
+  overflow: hidden;
+  background-color: var(--background);
+  color: var(--white);
+  font-family: sans-serif;
+  font-size: 14px;
+  display: flex;
+  align-items: center; /* TODO: this has to be a row and alighn-items top at dashboard */
+  flex-direction: column;
+}
 .main {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 6rem;
   min-height: 100vh;
+}
+.col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: var(--gap);
+}
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: var(--gap);
+}
+a{
+  text-decoration: none;
+  font-size: 14px;
+  color: var(--white);
 }
