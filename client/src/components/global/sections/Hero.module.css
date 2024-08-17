@@ -1,0 +1,16 @@
+.section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    height: 750px;
+    width: 100vw;
+}
+.section .title{
+    display: flex;
+    flex-direction: column;
+}
+.section h1{
+    font-size: 50px;
+    margin-bottom: -5px;
+}

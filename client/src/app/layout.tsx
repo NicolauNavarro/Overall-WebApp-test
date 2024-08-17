@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
 import "./globals.css";
+// Supports weights 100-900
+import '@fontsource-variable/onest';
 
 
 const font = DM_Sans({ subsets: ["latin"] });
@@ -18,7 +20,7 @@ export default function RootLayout({
   
   return (
     <html lang="en">
-      <body className={font.className}>
+      <body>
         {children}
       </body>
     </html>

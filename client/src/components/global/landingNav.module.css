@@ -1,6 +1,7 @@
 
 .navbar{
     background-color: var(--background-2);
+    background: transparent;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -10,6 +11,7 @@
     left: 0;
     width: 100vw;
     height: 60px;
+    z-index: 98;
 }
 .navbar span{
     opacity: 0.8;
@@ -35,16 +37,16 @@
 .navbar button{
     min-width: 80px;
     height: 34px;
-    border-radius: 8px;
+    border-radius: 10px;
     padding: 0px 12px;
-    background-color: var(--nav-active);
+    background-color: #ffffff90;
     border: none;
-    color: var(--background-2);
-    box-shadow: 0px 0px 10px 3px var(--gray);
+    color: var(--background);
     cursor: pointer;
     transition: 0.15s ease;
 }
 .navbar button.special{
+    opacity: 1;
     border-radius: 17px;
     background: transparent;
     border: 1px solid var(--gray);
