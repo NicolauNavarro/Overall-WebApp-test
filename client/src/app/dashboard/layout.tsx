@@ -9,6 +9,7 @@ import {
 } from "@clerk/nextjs";
 import "./globals.css";
 import Navbar from "@/components/global/dashNavbar";
+import GradientBackground from "@/components/global/GradientBackground";
 
 export default function RootLayout({
   children,
@@ -19,6 +20,7 @@ export default function RootLayout({
     <ClerkProvider>
       <SignedOut>
         <div className="centered-body">
+        <GradientBackground/>
         <SignIn routing="hash" forceRedirectUrl="/dashboard/#" />
         </div>
       </SignedOut>

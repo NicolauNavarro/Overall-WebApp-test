@@ -121,3 +121,7 @@ a {
   align-items: flex-start;
   justify-content: flex-start;
 }
+section{
+  width: 100vw;
+  display: flex;
+}

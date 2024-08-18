@@ -1,0 +1,7 @@
+.section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+    gap: 20px;
+}
