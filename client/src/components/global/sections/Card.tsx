@@ -13,3 +13,4 @@ const Card = (props: Props) => {
 }
 
 export default Card
+
